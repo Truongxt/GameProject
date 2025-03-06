@@ -1,0 +1,28 @@
+.menuContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.menuContainer>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    gap: 30px;
+    padding: 10px 0 0 0;
+}
+.menuContainer>ul>li{
+    list-style-type: none;
+}
+
+.menuContainer>ul>li>a{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.menuContainer>ul>li>a>p{
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+}
