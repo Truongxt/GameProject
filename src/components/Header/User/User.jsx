@@ -8,7 +8,8 @@ const User = () =>{
             <div className='userEnter'>
             <NavLink to="/login"><p>Đăng nhập</p></NavLink>
             <p>/</p>
-            <NavLink><p>Đăng ký</p></NavLink>
+            <NavLink to="/register"><p>Đăng ký</p></NavLink>
+            
             </div>
         </div>
     );

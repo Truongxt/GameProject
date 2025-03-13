@@ -10,6 +10,14 @@ const routers = [
         component: lazy(() => import('@pages/Login/Login'))
     },
     {
+        path: '/register',
+        component: lazy(() => import('@pages/Login/Register'))
+    },
+    {
+        path: '/forgot-password',
+        component: lazy(() => import('@pages/Login/ForgotPassword'))
+    },
+    {
         path: '/contact',
         component: lazy(() => import('@pages/Contact/Contact'))
     }
