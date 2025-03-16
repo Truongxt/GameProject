@@ -10,7 +10,7 @@ function App() {
     <div style={{backgroundColor: 'rgb(236,236,236)'}}>
       <Header></Header>
         {/* <Suspense fallback={<div>Loading</div>}> */}
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center my-3">
            <div className="" style={{width: '80%', height: '100vh'}}>
             <Routes>
                 {
