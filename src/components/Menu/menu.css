@@ -2,12 +2,13 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    background-color: white;
 }
 .menuContainer>ul{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 85%;
+    width: 80%;
     gap: 30px;
     padding: 10px 0 0 0;
 }

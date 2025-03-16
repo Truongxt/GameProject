@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainLayout from '@components/Layout/Layout';
 import Header from './components/Header/Header';
-import Menu from './components/Menu/Menu';
 import { Routes, Route } from 'react-router-dom';
 import routers from './routers/routers'; 
 // import { Suspense } from 'react';
@@ -9,10 +7,8 @@ import routers from './routers/routers';
 function App() {
 
   return (
-    <>
+    <div style={{backgroundColor: 'rgb(236,236,236)'}}>
       <Header></Header>
-      <Menu></Menu>
-      <MainLayout>
         {/* <Suspense fallback={<div>Loading</div>}> */}
           <Routes>
             {
@@ -28,8 +24,7 @@ function App() {
             }
           </Routes>
         {/* </Suspense> */}
-      </MainLayout>
-    </>
+    </div>
   )
 }
 

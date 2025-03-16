@@ -20,6 +20,10 @@ const routers = [
     {
         path: '/contact',
         component: lazy(() => import('@pages/Contact/Contact'))
+    },
+    {
+        path: '/steamwallet',
+        component: lazy(() => import('@pages/SteamWallet/SteamWallet'))
     }
 ]
-export default routers
+export default routers;
