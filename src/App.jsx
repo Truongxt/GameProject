@@ -10,19 +10,23 @@ function App() {
     <div style={{backgroundColor: 'rgb(236,236,236)'}}>
       <Header></Header>
         {/* <Suspense fallback={<div>Loading</div>}> */}
-          <Routes>
-            {
-              routers.map((item, index) => {
-                return(
-                  <Route 
-                    path={item.path}
-                    element = {<item.component/>}
-                    key={index}
-                  />
-                )
-              })
-            }
-          </Routes>
+        <div className="d-flex justify-content-center align-items-center">
+           <div className="" style={{width: '80%', height: '100vh'}}>
+            <Routes>
+                {
+                  routers.map((item, index) => {
+                    return(
+                      <Route 
+                        path={item.path}
+                        element = {<item.component/>}
+                        key={index}
+                      />
+                    )
+                  })
+                }
+              </Routes>
+            </div>
+        </div>
         {/* </Suspense> */}
     </div>
   )
