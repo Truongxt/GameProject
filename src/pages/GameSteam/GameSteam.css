@@ -1,0 +1,155 @@
+/* Container chính */
+.steam-game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #1b2838;
+    color: white;
+}
+
+/* Tiêu đề */
+.steam-game-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Bộ lọc */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-container select,
+.filter-button,
+.reset-button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-container select {
+    background: #fff;
+    color: #333;
+    width: 200px;
+}
+
+/* Nút bộ lọc */
+.filter-button {
+    background: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-button:hover {
+    background: #0056b3;
+}
+
+/* Nút khôi phục */
+.reset-button {
+    background: #dc3545;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.reset-button:hover {
+    background: #c82333;
+}
+
+/* Danh sách game */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Thẻ game */
+.game-card {
+    background: #2a475e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+/* Ảnh game */
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Tiêu đề game */
+.game-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Thể loại & nền tảng */
+.genre, .publisher, .release-date {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+/* Nút tải ngay */
+.play-now {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.play-now:hover {
+    background: #218838;
+}
+
+/* Nút "Xem thêm" */
+.load-more {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #17a2b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.load-more:hover {
+    background: #138496;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-container select {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -14,7 +14,7 @@ const Menu = () => {
                         <NavLink to="/"><img src={homeicon} alt="" /><p>Trang chủ</p></NavLink>
                     </li>
                     <li>
-                        <NavLink to=""><img src={steamicon} alt="" /><p>Game Steam</p></NavLink>
+                        <NavLink to="/game-steam"><img src={steamicon} alt="" /><p>Game Steam</p></NavLink>
                     </li>
                     <li>
                         <NavLink><img src={walleticon} alt="" /><p>Steam Wallet</p></NavLink>
