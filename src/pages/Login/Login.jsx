@@ -8,6 +8,10 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    {/* Overlay làm mờ nền */}
+    <div className="overlay"></div>
+    
     <Container className="auth-container">
       <div className="auth-box">
         <div className="close-btn-wrapper">
@@ -37,7 +41,7 @@ const Login = () => {
               <div className="forgot-password">
                 <Link to="/forgot-password">Bạn quên mật khẩu?</Link>
               </div>
-              <Button className="w-100 btn-login" type="submit">Đăng nhập</Button>
+              <Button className="w-100 btn-login" type="submit">Đăng nhập </Button>
             </Form>
 
             <div className="divider">Hoặc đăng nhập bằng</div>
@@ -62,6 +66,7 @@ const Login = () => {
         </div>
       </div>
     </Container>
+    </>
   );
 };
 
