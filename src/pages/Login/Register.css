@@ -1,112 +1,55 @@
-.auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
-.auth-box {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 900px;
+.hover-underline {
   position: relative;
-}
-
-.close-btn-wrapper {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.auth-title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.auth-title .active {
-  color: black;
-}
-
-.auth-title .inactive {
-  color: gray;
   text-decoration: none;
 }
 
-.auth-title .inactive:hover {
-  text-decoration: underline;
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
 }
 
-.auth-desc {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 20px;
+.hover-underline:hover::after {
+  transform: scaleX(1);
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-control {
-  border-radius: 6px;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.btn-login {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-login:hover {
-  background-color: #0056b3;
-}
-
-.divider {
-  text-align: center;
-  color: #888;
-  font-size: 14px;
-  margin-top: 15px;
+/* Floating label container */
+.floating-label-group {
   position: relative;
+  width: 100%;
+}
+
+/* Input field */
+.floating-label-group .form-control-custom {
+  width: 100%;
+  padding: 14px 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, padding-top 0.3s ease-in-out;
+}
+
+/* Label */
+.floating-label-group .floating-label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: gray;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 
 
-.social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48%;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid #ddd;
-  cursor: pointer;
-}
 
-.social-btn img {
-  width: 20px;
-  margin-right: 8px;
-}
-
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
