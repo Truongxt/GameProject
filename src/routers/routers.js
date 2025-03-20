@@ -22,6 +22,10 @@ const routers = [
         component: lazy(() => import('@pages/Contact/Contact'))
     },
     {
+        path: '/cart',
+        component: lazy(() => import('@pages/Cart/Cart'))
+    },
+    {
         path: '/steamwallet',
         component: lazy(() => import('@pages/SteamWallet/SteamWallet'))
     }
