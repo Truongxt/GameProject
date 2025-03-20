@@ -1,0 +1,61 @@
+.hover-underline:hover {
+    text-decoration: underline;
+}
+p {
+    color: #333;  /* Màu chữ mặc định (đen nhạt) */
+}
+
+
+/* Ẩn mũi tên mặc định trên trình duyệt */
+.custom-select {
+    appearance: none;  /* Loại bỏ kiểu mặc định */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="gray"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Đặt icon mũi tên */
+    background-size: 18px;
+    padding-right: 30px; /* Tạo khoảng cách với mũi tên */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tùy chỉnh giao diện của combobox */
+.custom-select {
+    appearance: none; /* Ẩn giao diện mặc định của hệ thống */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tạo phần tử bao quanh combobox để có mũi tên tùy chỉnh */
+.custom-select-wrapper {
+    position: relative;
+    width: 50%;
+}
+
+/* Thêm mũi tên tùy chỉnh */
+.custom-select-wrapper::after {
+    content: "▼"; /* Biểu tượng mũi tên */
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Không ảnh hưởng đến thao tác click */
+    color: #333;
+}
+
+/* Khi focus vào combobox, đổi màu viền */
+.custom-select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+
