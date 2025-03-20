@@ -63,6 +63,9 @@
 .text-success {
     color: #28a745 !important; /* Màu xanh lá cây */
     font-size: 30px;
+}
+
+.discount-price {
     text-decoration: line-through; /* Gạch ngang */
 }
 

@@ -34,11 +34,35 @@ export const CartProvider = ({ children }) => {
         setCart((prevCart) => prevCart.filter((p) => p.id !== productId));
     };
 
+    // Xóa toàn bộ giỏ hàng
+    const clearCart = () => {
+        setCart([]);
+    };
+
     // Dem tong so san pham trong gio hang
     const totalItems = cart.length;
 
+    // Tính tổng giá trị giỏ hàng
+    const totalPrice = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
+
+    // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng
+    const isProductInCart = (productId) => {
+        return cart.some((p) => p.id === productId);
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, totalItems }}>
+        <CartContext.Provider
+            value={{
+                cart,
+                addToCart,
+                removeFromCart,
+                updateQuantity,
+                clearCart,
+                totalItems,
+                totalPrice,
+                isProductInCart
+            }}
+        >
             {children}
         </CartContext.Provider>
     );
