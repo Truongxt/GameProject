@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Container, Row, Col, Card, Button, Spinner, Alert, Accordion} from 'react-bootstrap';
-import './GameDetail.css'; // Import file CSS
+import './GameDetail.css';
+import { useCart } from '../Cart/CartContext';
 
 const GameDetail = () => {
     const { id } = useParams();
     const [game, setGame] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
 
     // Cuộn lên đầu trang khi component được render
     useEffect(() => {
@@ -36,6 +39,19 @@ const GameDetail = () => {
                 setLoading(false);
             });
     }, [id]);
+
+    const handleBuyNow = () => {
+        if (game) {
+            addToCart(game);
+            navigate('/cart'); // Chuyển hướng đến trang giỏ hàng
+        }
+    };
+
+    const handleAddToCart = () => {
+        if (game) {
+            addToCart(game);
+        }
+    };
 
     if (loading) {
         return (
@@ -107,14 +123,14 @@ const GameDetail = () => {
                                         Giá: <span className="text-danger">99.000đ</span>
                                     </Card.Text>
                                     <Card.Text className="mb-4">
-                                        Tiết kiệm: <span className="text-success">2.900.900đ (+3%)</span>
+                                        Tiết kiệm: <span className="text-success discount-price">2.900.900đ (+3%)</span>
                                     </Card.Text>
 
                                     {/* Nút hành động */}
-                                    <Button variant="danger" className="w-100 mb-3">
+                                    <Button variant="danger" className="w-100 mb-3" onClick={handleBuyNow}>
                                         Mua ngay
                                     </Button>
-                                    <Button variant="outline-secondary" className="w-100">
+                                    <Button variant="outline-secondary" className="w-100" onClick={handleAddToCart}>
                                         Thêm vào giỏ hàng
                                     </Button>
                                 </Col>
