@@ -1,155 +1,107 @@
-/* Container chính */
-.steam-game-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background: #1b2838;
-    color: white;
-}
-
-/* Tiêu đề */
-.steam-game-container h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-/* Bộ lọc */
-.filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.filter-container select,
-.filter-button,
-.reset-button {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
+/* Loại bỏ viền của Card và thêm hiệu ứng hover */
+.card {
     border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    background-color: #ffffff; /* Màu nền của Card */
+    border-radius: 10px; /* Bo góc cho Card */
+    overflow: hidden; /* Đảm bảo hình ảnh không tràn ra ngoài */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
 
-.filter-container select {
-    background: #fff;
-    color: #333;
-    width: 200px;
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng đậm hơn khi hover */
 }
 
-/* Nút bộ lọc */
-.filter-button {
-    background: #007bff;
-    color: white;
+/* Style cho hình ảnh trong Card */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định cho hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+/* Style cho tiêu đề của Card */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333; /* Màu chữ tiêu đề */
+}
+
+/* Style cho các thông tin khác trong Card */
+.card-text {
+    font-size: 0.9rem;
+    color: #666; /* Màu chữ thông tin */
+    margin-bottom: 0.25rem;
+}
+
+/* Style cho phần thông tin thể loại và nền tảng */
+.text-muted {
+    color: #888 !important; /* Màu chữ nhạt hơn */
+}
+
+/* Đảm bảo Card không bị tràn khi hover */
+.card-body {
+    padding: 1rem;
+}
+
+/* Style cho phân trang */
+.pagination {
+    margin-top: 2rem;
+}
+
+.pagination .page-item .page-link {
+    color: #007bff; /* Màu chữ của nút phân trang */
+    border: none;
+    margin: 0 0.25rem;
+    border-radius: 5px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* Màu nền của nút phân trang khi active */
+    border-color: #007bff;
+    color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #ccc; /* Màu chữ của nút phân trang khi disabled */
+}
+
+/* Style cho nút Lọc và Khôi phục bộ lọc */
+.filter-button, .reset-button {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
+}
+
+.filter-button {
+    background-color: #007bff;
+    border: none;
 }
 
 .filter-button:hover {
-    background: #0056b3;
+    background-color: #0056b3;
 }
 
-/* Nút khôi phục */
 .reset-button {
-    background: #dc3545;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    background-color: #6c757d;
+    border: none;
 }
 
 .reset-button:hover {
-    background: #c82333;
+    background-color: #5a6268;
 }
 
-/* Danh sách game */
-.game-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+/* Style cho spinner khi đang tải */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
 }
 
-/* Thẻ game */
-.game-card {
-    background: #2a475e;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-}
-
-/* Ảnh game */
-.game-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Tiêu đề game */
-.game-card h3 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Thể loại & nền tảng */
-.genre, .publisher, .release-date {
-    font-size: 14px;
-    color: #ccc;
-    margin: 5px 0;
-}
-
-/* Nút tải ngay */
-.play-now {
-    display: inline-block;
-    padding: 8px 12px;
-    background: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.play-now:hover {
-    background: #218838;
-}
-
-/* Nút "Xem thêm" */
-.load-more {
-    padding: 12px 20px;
-    font-size: 16px;
-    background: #17a2b8;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-
-.load-more:hover {
-    background: #138496;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .filter-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .filter-container select {
-        width: 100%;
-        max-width: 300px;
-    }
+/* Style cho thông báo lỗi */
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
 }

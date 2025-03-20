@@ -1,0 +1,94 @@
+/* Loại bỏ hiệu ứng hover cho tất cả các phần tử */
+.game-detail-container *:hover {
+    transform: none !important; /* Bỏ hiệu ứng chuyển động */
+    box-shadow: none !important; /* Bỏ đổ bóng */
+    color: inherit !important; /* Giữ nguyên màu chữ */
+}
+
+/* Loại bỏ hiệu ứng hover cho Card */
+.game-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Khung chứa thông tin game */
+.game-card {
+    border: 1px solid #ddd; /* Viền khung */
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    padding: 5px; /* Khoảng cách nội dung */
+}
+
+/* Phần hình ảnh */
+.game-card .card-img-top {
+    height: 100%; /* Chiều cao bằng với Card */
+    object-fit: fill; /* Đảm bảo hình ảnh không bị méo */
+}
+
+/* Phần thông tin và nút hành động */
+.game-card .card-title {
+    font-size: 40px !important; /* Kích thước tiêu đề */
+    font-weight: bold; /* Đậm */
+    color: #000; /* Màu chữ đen */
+}
+
+.game-card .card-text {
+    font-weight: normal;
+    color: #000; /* Màu chữ đen */
+}
+
+/* Nút hành động */
+.game-card .btn-danger {
+    background-color: #dc3545; /* Màu nền đỏ */
+    border: none; /* Bỏ viền */
+    font-weight: bold; /* Đậm */
+    font-size: large;
+    height: 50px;
+}
+
+.game-card .btn-outline-secondary {
+    border-color: #6c757d; /* Màu viền xám */
+    color: #6c757d; /* Màu chữ xám */
+    font-weight: bold; /* Đậm */
+    font-size: large;
+    height: 50px;
+}
+
+/* Màu sắc giá cả */
+.text-danger {
+    color: #dc3545 !important; /* Màu đỏ */
+    font-size: 40px;
+}
+
+.text-success {
+    color: #28a745 !important; /* Màu xanh lá cây */
+    font-size: 30px;
+    text-decoration: line-through; /* Gạch ngang */
+}
+
+/* Phần cốt truyện, chính sách bảo hành và FAQ */
+.game-detail-container .card {
+    margin-bottom: 20px; /* Khoảng cách giữa các phần */
+}
+
+.game-detail-container .card-title {
+    font-size: 1.25rem; /* Kích thước tiêu đề */
+    font-weight: bold; /* Đậm */
+    color: #000; /* Màu chữ đen */
+}
+
+.game-detail-container .card-text {
+    font-size: 1rem; /* Kích thước văn bản */
+    color: #000; /* Màu chữ đen */
+}
+
+/* Accordion (FAQ) */
+.accordion-button {
+    font-weight: bold; /* Đậm */
+    color: #000; /* Màu chữ đen */
+}
+
+.accordion-body {
+    font-size: 0.9rem; /* Kích thước văn bản nhỏ hơn */
+    color: #333; /* Màu chữ xám đậm */
+}

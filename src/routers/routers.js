@@ -42,8 +42,12 @@ const routers = [
         component: lazy(() => import('@pages/Cart/Cart'))
     },
     {
-        path: '/game-steam',
+        path: '/gamelist',
         component: lazy(() => import('@pages/GameSteam/GameSteam'))
+    },
+    {
+        path: '/gamelist/:id',
+        component: lazy(() => import('@pages/GameSteam/GameDetail'))
     },
     {
         path: '/steamwallet',
