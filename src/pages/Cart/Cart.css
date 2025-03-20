@@ -1,0 +1,102 @@
+ #bt1:hover {
+    background-color: white !important;
+    color: #0d6efd !important;
+    border-color: #0d6efd !important;
+  }
+
+ #bt2:hover {
+    background-color: white !important;
+    color: #006938 !important;
+    border-color: #006938 !important;
+  }
+
+ #bt3:hover {
+    background-color: white !important;
+    color: #ff0707 !important;
+    border-color: #ff0707 !important;
+  }
+
+  #thanhtoan{
+    margin-left: 13px !important;
+    font-size: 15px !important; 
+  }
+
+  #thanhtoan #text1{
+    height: 40px;
+  }
+
+  #thanhtoan #text{
+    height: 30px;
+  }
+
+  #discount{
+    width: 35px;
+    height: 25px;
+    font-size: 11px !important;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  #btn-payment{
+    background-color: #2579f3 !important;
+    height: 40px;
+    border-radius: 7px 7px 7px 7px;
+    margin-top: 20px;
+  }
+
+  #btn-payment:hover{
+    background-color: #2884ff !important;
+    transform: scale(1.005);
+  }
+
+  #btn-scan{
+    background-color: #005baa !important;
+    height: 40px;
+    border-radius: 7px 7px 7px 7px;
+  }
+
+  #btn-scan:hover{
+    transform: scale(1.005);
+  }
+
+  #btn-momo{
+    background-color: #a2016a !important;
+    height: 40px;
+    border-radius: 7px 7px 7px 7px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  #btn-momo:hover{
+    transform: scale(1.005);
+  }
+
+  #btn-confirm{
+    background-color: #29b473 !important;
+    height: 40px;
+    border-radius: 7px 7px 7px 7px;
+    margin-top: 10px;
+  }
+
+  #btn-confirm:hover{
+    transform: scale(1.005);
+  }
+
+  #btn-confirm-payment{
+    background-color: #2884ff !important;
+    height: 40px;
+    border-radius: 7px 7px 7px 7px;
+    margin-top: 10px;
+  }
+
+  #btn-confirm-payment:hover{
+    background-color: #29b473 !important;
+    transform: scale(1.005);
+  }
+
+  #btn-back{
+    background-color: white !important;
+    color: #005baa !important;
+    text-decoration-line: underline;
+    height: 40px;
+    border-radius: 7px 7px 7px 7px;
+  }

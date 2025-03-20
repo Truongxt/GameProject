@@ -1,0 +1,24 @@
+.ant-steps-item-icon{
+    margin-top: 8px !important;
+    width: 15px !important;
+    height: 15px !important;
+  }
+.ant-steps-item-finish .ant-steps-item-icon {
+    background-color: #0d6efd !important; 
+}
+  
+.ant-steps-item-process .ant-steps-item-icon {
+    background-color: #0d6efd !important;
+}
+  
+.ant-steps-item-wait .ant-steps-item-icon {
+    background-color: gray !important;
+}
+
+.ant-steps-icon {
+    display: none !important;
+}
+
+.ant-steps-item-title > span{
+  font-size: 15px !important;
+}

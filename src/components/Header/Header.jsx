@@ -5,7 +5,9 @@ import { Image, InputGroup, Button, FormControl, Badge, Col } from 'react-bootst
 import Menu from '@components/Menu/Menu'
 import User from './User/User'
 import { NavLink } from 'react-router-dom'
+import { useCart } from "../../pages/Cart/CartContext";
 const Header = () =>{
+    const {totalItems} = useCart();
     return(
         <div>
             <div className="d-flex justify-content-center bg-dark py-1">
@@ -29,7 +31,7 @@ const Header = () =>{
                         <NavLink className="d-flex gap-2 text-white p-2 text-decoration-none border rounded" to='/cart'>
                             <img src={cartIcon} alt="" />
                             <p>Giỏ hàng</p>
-                            <Badge bg='secondary' className='m-0'>0</Badge>
+                            <Badge bg='secondary mt-1' className='m-0'>{totalItems}</Badge>
                         </NavLink>
                      </Col>
                 </div>
